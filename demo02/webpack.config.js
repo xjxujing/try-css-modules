@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, './src/app.js'),
+    main: path.resolve(__dirname, './app.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -11,7 +11,8 @@ module.exports = {
   },
   devServer: {
     static: './deploy',
-    open: true
+    open: true,
+    port: 7002
   },
   plugins: [
     new HtmlWebpackPlugin({

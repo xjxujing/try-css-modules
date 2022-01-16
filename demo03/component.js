@@ -4,13 +4,9 @@ export default () => {
   const element = document.createElement("div");
 
   let DOM = `
-    <h1 class="title">
-      let's use CSS Modules!
-    </h1>
-
-    <h1 class="${style.title}">
-      let's use CSS Modules!
-    </h1>
+    <div class="${style.root}">
+      <p class="${style.text}">Use value to define text's color</p>
+    </div>
   `
   element.innerHTML = DOM;
   return element;
