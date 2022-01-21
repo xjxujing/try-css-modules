@@ -1,7 +1,7 @@
 import style from './style.css';
 
 export default () => {
-  const element = document.createElement("div");
+  const element = document.createElement('div');
 
   let DOM = `
     <div class="${style.root}">
@@ -11,7 +11,7 @@ export default () => {
     <div class="${style.root}">
       <p class="${style.text}">Unlock the comment to see Overrides's effect</p>
     </div>
-  `
+  `;
   element.innerHTML = DOM;
   return element;
 };

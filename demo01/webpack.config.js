@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,16 +7,16 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'deploy')
+    path: path.resolve(__dirname, 'deploy'),
   },
   devServer: {
     static: './deploy',
     open: true,
-    port: 7001
+    port: 7001,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Try CSS Modules",
+      title: 'Try CSS Modules',
     }),
   ],
   module: {
@@ -27,25 +27,24 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
-      { 
+      {
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader',
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
-              modules: true
-            } 
-          }
-        ]
-        
-      }
-    ]
+              modules: true,
+            },
+          },
+        ],
+      },
+    ],
   },
 };

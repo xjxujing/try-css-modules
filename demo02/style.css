@@ -1,12 +1,12 @@
 .root {
-  composes: box from "shared/layout.css";
+  composes: box from 'shared/layout.css';
   border-color: red;
   margin-bottom: 10px;
   /* border-style: dotted; */
 }
 
 .text {
-  composes: heading from "shared/typography.css";
+  composes: heading from 'shared/typography.css';
   color: red;
   /* font-weight: 200; */
 }
